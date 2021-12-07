@@ -16,6 +16,7 @@ fn main() {
     let solution_by_day: Box<dyn solution::Solution> = match opts.day {
         1 => Box::new(y21::Day01 {}),
         2 => Box::new(y21::Day02 {}),
+        3 => Box::new(y21::Day03 {}),
         _ => unimplemented!(),
     };
 
