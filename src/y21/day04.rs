@@ -58,7 +58,7 @@ impl Solution for Day04 {
             let mut winning_board_indices = boards
                 .iter()
                 .enumerate()
-                .filter(|(i, b)| b.win())
+                .filter(|t| t.1.win())
                 .map(|t| t.0)
                 .collect_vec();
             if boards.len() > winning_board_indices.len() {
