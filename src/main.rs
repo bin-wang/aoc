@@ -21,6 +21,7 @@ fn main() {
         5 => Box::new(y21::Day05 {}),
         6 => Box::new(y21::Day06 {}),
         7 => Box::new(y21::Day07 {}),
+        8 => Box::new(y21::Day08 {}),
         _ => unimplemented!(),
     };
 
