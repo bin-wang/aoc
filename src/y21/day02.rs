@@ -50,7 +50,7 @@ impl Day02 {
         let contents = fs::read_to_string(input_file).expect("Could not read file");
         contents
             .trim()
-            .split("\n")
+            .lines()
             .map(|l| {
                 let (command, x) = scan_fmt!(l, "{} {}", String, u32).unwrap();
                 match command.as_str() {

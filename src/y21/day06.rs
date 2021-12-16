@@ -1,4 +1,3 @@
-use std::collections::HashMap;
 use std::fs;
 
 use crate::solution::Solution;
@@ -21,7 +20,7 @@ fn progress_one_day(prev_counter: [u128; 9]) -> [u128; 9] {
 impl Solution for Day06 {
     fn part_1(&self, input_file: &str) -> String {
         let mut counter = self.read_input(input_file);
-        for i in 0..80 {
+        for _ in 0..80 {
             counter = progress_one_day(counter);
         }
         counter.iter().sum::<u128>().to_string()
@@ -29,7 +28,7 @@ impl Solution for Day06 {
 
     fn part_2(&self, input_file: &str) -> String {
         let mut counter = self.read_input(input_file);
-        for i in 0..256 {
+        for _ in 0..256 {
             counter = progress_one_day(counter);
         }
         counter.iter().sum::<u128>().to_string()
@@ -42,7 +41,7 @@ impl Day06 {
         let contents = fs::read_to_string(input_file).unwrap();
         contents
             .trim()
-            .split(",")
+            .lines()
             .map(|s| s.parse::<usize>().unwrap())
             .for_each(|i| counter[i] += 1);
         counter

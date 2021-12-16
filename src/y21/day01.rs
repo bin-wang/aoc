@@ -26,7 +26,7 @@ impl Day01 {
         let contents = fs::read_to_string(input_file).expect("Could not read file");
         contents
             .trim()
-            .split("\n")
+            .lines()
             .map(|s| s.parse().unwrap())
             .collect()
     }
