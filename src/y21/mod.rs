@@ -6,6 +6,7 @@ mod day05;
 mod day06;
 mod day07;
 mod day08;
+mod day09;
 
 pub struct Day01 {}
 pub struct Day02 {}
@@ -15,3 +16,4 @@ pub struct Day05 {}
 pub struct Day06 {}
 pub struct Day07 {}
 pub struct Day08 {}
+pub struct Day09 {}
