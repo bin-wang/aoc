@@ -39,8 +39,7 @@ fn find_low_points<'a>(heights: &'a Vec<Vec<u8>>) -> Box<dyn Iterator<Item = (us
     let h = heights.len();
     let w = heights[0].len();
     let it = (0..h).cartesian_product(0..w).filter(move |(i, j)| {
-        surrounding_coordinates(*i, *j, h, w)
-            .all(|(x, y)| heights[*i][*j] < heights[x][y])
+        surrounding_coordinates(*i, *j, h, w).all(|(x, y)| heights[*i][*j] < heights[x][y])
     });
     Box::new(it)
 }
@@ -80,11 +79,10 @@ impl Solution for Day09 {
     fn part_2(&self, input_file: &str) -> String {
         let heights = read_input(input_file);
         let mut size_map: HashMap<(usize, usize), u32> = HashMap::new();
-        find_low_points(&heights)
-            .for_each(|(i, j)| {
-                let size = get_basin_size(&heights, i, j);
-                size_map.insert((i, j), size);
-            });
+        find_low_points(&heights).for_each(|(i, j)| {
+            let size = get_basin_size(&heights, i, j);
+            size_map.insert((i, j), size);
+        });
 
         let sizes = size_map.values().sorted().rev().take(3).collect_vec();
         let mut product = 1;

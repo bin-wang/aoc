@@ -16,7 +16,7 @@ fn read_input(input_file: &str) -> Vec<Vec<u8>> {
         .collect_vec()
 }
 
-fn surrounding_coordinates(i: usize, j: usize) -> Box<dyn Iterator<Item=(usize, usize)>> {
+fn surrounding_coordinates(i: usize, j: usize) -> Box<dyn Iterator<Item = (usize, usize)>> {
     let mut x = vec![i];
     if i > 0 {
         x.push(i - 1);
