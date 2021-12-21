@@ -60,7 +60,11 @@ impl Solution for Day12 {
     fn part_2(&self, input_file: &str) -> String {
         let connection_map = read_input(input_file);
 
-        fn dfs(connection_map: &HashMap<String, Vec<String>>, path: &mut Vec<String>, dup_allowed: bool) -> u32 {
+        fn dfs(
+            connection_map: &HashMap<String, Vec<String>>,
+            path: &mut Vec<String>,
+            dup_allowed: bool,
+        ) -> u32 {
             let current_node = path.last().unwrap();
             if current_node == "end" {
                 1
