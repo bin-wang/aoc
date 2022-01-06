@@ -3,8 +3,8 @@ use std::fs;
 
 use itertools::Itertools;
 
-use crate::solution::Solution;
 use crate::y21::Day12;
+use aoc::Solution;
 
 fn read_input(input_file: &str) -> HashMap<String, Vec<String>> {
     let mut connection_map = HashMap::new();

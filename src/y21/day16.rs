@@ -1,8 +1,8 @@
 use itertools::Itertools;
 use std::fs;
 
-use crate::solution::Solution;
 use crate::y21::Day16;
+use aoc::Solution;
 
 enum Payload {
     Number(u64),

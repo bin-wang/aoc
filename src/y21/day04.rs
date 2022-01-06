@@ -1,11 +1,10 @@
+use itertools::Itertools;
 use std::fs::File;
 use std::io;
 use std::io::BufRead;
 
-use itertools::Itertools;
-
-use crate::solution::Solution;
 use crate::y21::Day04;
+use aoc::Solution;
 
 struct Board {
     numbers: [[u8; 5]; 5],

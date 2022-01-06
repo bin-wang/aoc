@@ -1,8 +1,8 @@
 use itertools::Itertools;
 use std::fs;
 
-use crate::solution::Solution;
 use crate::y21::Day10;
+use aoc::Solution;
 
 enum CheckResult {
     IllegalChar(char),

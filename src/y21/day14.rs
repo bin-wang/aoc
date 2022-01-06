@@ -3,8 +3,8 @@ use scan_fmt::scan_fmt;
 use std::collections::HashMap;
 use std::fs;
 
-use crate::solution::Solution;
 use crate::y21::Day14;
+use aoc::Solution;
 
 fn read_input(input_file: &str) -> (String, HashMap<(char, char), char>) {
     let contents = fs::read_to_string(input_file).unwrap();

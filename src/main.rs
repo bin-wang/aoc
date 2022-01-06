@@ -1,19 +1,21 @@
 use clap::Parser;
 
-mod solution;
+use aoc::Solution;
+
 mod y21;
 
 #[derive(Parser)]
-#[clap(version = "0.1.0", author = "Bin Wang <wkk@users.noreply.github.com>")]
-struct Opts {
+#[clap(about, author)]
+struct Args {
     day: u32,
     part: u32,
+    #[clap(name = "file", short, long, default_value = "input.txt")]
     input_file: String,
 }
 
 fn main() {
-    let opts: Opts = Opts::parse();
-    let solution_by_day: Box<dyn solution::Solution> = match opts.day {
+    let args = Args::parse();
+    let solution_by_day: Box<dyn Solution> = match args.day {
         1 => Box::new(y21::Day01 {}),
         2 => Box::new(y21::Day02 {}),
         3 => Box::new(y21::Day03 {}),
@@ -33,10 +35,10 @@ fn main() {
         _ => unimplemented!(),
     };
 
-    let answer: String = if opts.part == 1 {
-        solution_by_day.part_1(opts.input_file.as_str())
+    let answer: String = if args.part == 1 {
+        solution_by_day.part_1(args.input_file.as_str())
     } else {
-        solution_by_day.part_2(opts.input_file.as_str())
+        solution_by_day.part_2(args.input_file.as_str())
     };
 
     println!("{}", answer);

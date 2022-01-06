@@ -2,8 +2,8 @@ use scan_fmt::scan_fmt;
 use std::collections::HashMap;
 use std::fs;
 
-use crate::solution::Solution;
 use crate::y21::Day05;
+use aoc::Solution;
 
 struct Segment {
     start_x: u32,

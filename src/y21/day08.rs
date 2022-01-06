@@ -2,8 +2,8 @@ use itertools::Itertools;
 use std::collections::HashMap;
 use std::fs;
 
-use crate::solution::Solution;
 use crate::y21::Day08;
+use aoc::Solution;
 
 struct Entry {
     pattern: Vec<String>,

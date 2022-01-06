@@ -1,7 +1,7 @@
 use std::fs;
 
-use crate::solution::Solution;
 use crate::y21::Day06;
+use aoc::Solution;
 
 fn progress_one_day(prev_counter: [u128; 9]) -> [u128; 9] {
     let mut counter = [0; 9];

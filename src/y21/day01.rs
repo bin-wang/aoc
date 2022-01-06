@@ -1,7 +1,6 @@
-use std::fs;
-
-use crate::solution::Solution;
 use crate::y21::Day01;
+use aoc::Solution;
+use std::fs;
 
 impl Solution for Day01 {
     fn part_1(&self, input_file: &str) -> String {

@@ -2,8 +2,8 @@ use itertools::Itertools;
 use std::collections::{HashMap, HashSet};
 use std::fs;
 
-use crate::solution::Solution;
 use crate::y21::Day09;
+use aoc::Solution;
 
 fn read_input(input_file: &str) -> Vec<Vec<u8>> {
     let contents = fs::read_to_string(input_file).unwrap();

@@ -1,7 +1,7 @@
 use std::fs;
 
-use crate::solution::Solution;
 use crate::y21::Day03;
+use aoc::Solution;
 
 enum BitCriteria {
     MostCommon,

@@ -3,8 +3,8 @@ use std::fs;
 
 use itertools::Itertools;
 
-use crate::solution::Solution;
 use crate::y21::Day11;
+use aoc::Solution;
 
 const LEN: usize = 10;
 

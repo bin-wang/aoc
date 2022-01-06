@@ -4,8 +4,8 @@ use std::collections::HashSet;
 use std::fs;
 use std::hash::Hash;
 
-use crate::solution::Solution;
 use crate::y21::Day13;
+use aoc::Solution;
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
 struct Point {
     x: u32,

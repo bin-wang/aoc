@@ -1,8 +1,8 @@
 use itertools::Itertools;
 use std::{fs, vec};
 
-use crate::solution::Solution;
 use crate::y21::Day15;
+use aoc::Solution;
 
 fn read_input(input_file: &str) -> Vec<Vec<u32>> {
     let contents = fs::read_to_string(input_file).unwrap();

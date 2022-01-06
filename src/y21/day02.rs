@@ -1,9 +1,8 @@
+use scan_fmt::scan_fmt;
 use std::fs;
 
-use scan_fmt::scan_fmt;
-
-use crate::solution::Solution;
 use crate::y21::Day02;
+use aoc::Solution;
 
 enum Command {
     Forward(u32),
