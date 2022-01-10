@@ -1,8 +1,7 @@
 use clap::Parser;
 
+use aoc::y21;
 use aoc::Solution;
-
-mod y21;
 
 #[derive(Parser)]
 #[clap(about, author)]
@@ -35,11 +34,11 @@ fn main() {
         _ => unimplemented!(),
     };
 
-    let answer: String = if args.part == 1 {
-        solution_by_day.part_1(args.input_file.as_str())
+    let ans = if args.part == 1 {
+        solution_by_day.part_1(&args.input_file)
     } else {
-        solution_by_day.part_2(args.input_file.as_str())
+        solution_by_day.part_2(&args.input_file)
     };
 
-    println!("{}", answer);
+    println!("{}", ans);
 }
